@@ -47,16 +47,6 @@ objects:
     selector:
       matchLabels:
         app: ${APPLICATION_NAME}
-    strategy:
-      activeDeadlineSeconds: 21600
-      resources: {}
-      rollingParams:
-        intervalSeconds: 1
-        maxSurge: 25%
-        maxUnavailable: 25%
-        timeoutSeconds: 600
-        updatePeriodSeconds: 1
-      type: RollingUpdate
     template:
       metadata:
         labels:
@@ -89,17 +79,6 @@ objects:
         schedulerName: default-scheduler
         securityContext: {}
         terminationGracePeriodSeconds: 30
-    test: false
-    triggers:
-    - imageChangeParams:
-        automatic: true
-        containerNames:
-        - ${APPLICATION_NAME}
-        from:
-          kind: ImageStreamTag
-          name: ${APPLICATION_NAME}:latest
-      type: ImageChange
-    - type: ConfigChange
 - apiVersion: build.openshift.io/v1
   kind: BuildConfig
   metadata:
