@@ -34,7 +34,7 @@ objects:
       app: ${APPLICATION_NAME}
   status:
     loadBalancer: {}
-- apiVersion: apps.openshift.io/v1
+- apiVersion: apps/v1
   kind: Deployment
   metadata:
     labels:
