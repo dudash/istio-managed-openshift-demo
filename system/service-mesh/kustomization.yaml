@@ -20,4 +20,4 @@ resources:
 - service-monitor.yaml
 - smcp.yaml
 - isto-system-prometheus-htpasswd.yaml
-- ossmcosole.yaml
+- ossmconsole.yaml
