@@ -38,6 +38,11 @@ oc get pods
 
 oc create -f ./istio/gateway.yaml
 
+
+    #   excluded_workloads:
+    #   - CronJob
+    #   - Job
+
 echo The istio ingress gateway is:
 GATEWAY_URL=$(oc get route istio-ingressgateway -n istio-system --template='http://{{.spec.host}}')
 echo $GATEWAY_URL
