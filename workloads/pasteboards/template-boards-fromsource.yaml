@@ -282,7 +282,7 @@ objects:
               secretKeyRef:
                 key: database-name
                 name: ${DATABASE_SERVICE_NAME}
-          image: ' '
+          image: ''
           imagePullPolicy: IfNotPresent
           livenessProbe:
             initialDelaySeconds: 30
