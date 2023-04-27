@@ -1,14 +1,13 @@
-apiVersion: operators.coreos.com/v1alpha1
-kind: Subscription
+apiVersion: kiali.io/v1alpha1
+kind: OSSMConsole
 metadata:
   annotations:
-    argocd.argoproj.io/sync-wave: "22"
+    argocd.argoproj.io/sync-wave: "25"
   name: ossmconsole
   namespace: openshift-operators
 spec:
-  channel: candidate
-  installPlanApproval: Automatic
-  name: ossmconsole
-  source: community-operators
-  sourceNamespace: openshift-marketplace
-  #startingCSV: ossmconsole-operator.v0.3.0
+  kiali:
+    serviceName: ''
+    serviceNamespace: ''
+    servicePort: 0
+    url: ''
