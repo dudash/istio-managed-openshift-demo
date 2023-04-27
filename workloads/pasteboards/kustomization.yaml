@@ -6,3 +6,7 @@ namespace: pasteboards
 resources:
 - namespace.yaml
 - mongodb-imagestream.yaml
+- template-app-ui-fromsource.yaml
+- template-boards-fromsource.yaml
+- template-context-scraper-fromsource.yaml
+- template-userprofile-build.yaml
