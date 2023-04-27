@@ -50,7 +50,8 @@ objects:
   spec:
     replicas: 1
     selector:
-      app: ${APPLICATION_NAME}
+      matchLabels:
+        app: ${APPLICATION_NAME}
     strategy:
       activeDeadlineSeconds: 21600
       resources: {}
@@ -60,7 +61,7 @@ objects:
         maxUnavailable: 25%
         timeoutSeconds: 600
         updatePeriodSeconds: 1
-      type: Rolling
+      type: RollingUpdate
     template:
       metadata:
         labels:
@@ -243,7 +244,8 @@ objects:
   spec:
     replicas: 1
     selector:
-      name: ${DATABASE_SERVICE_NAME}
+      matchLabels:
+        name: ${DATABASE_SERVICE_NAME}
     strategy:
       type: Recreate
     template:
