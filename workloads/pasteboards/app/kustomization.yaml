@@ -1,0 +1,10 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: pasteboards
+
+resources:
+- template-app-ui-fromsource.yaml
+- template-boards-fromsource.yaml
+- template-context-scraper-fromsource.yaml
+- template-userprofile-build.yaml

@@ -1,6 +1,6 @@
 # Setup on RHPDS
 
-> Order the latest 4.x release [4.12 is here]()
+> Order the latest 4.x release [4.12 is here](https://demo.redhat.com/catalog?search=4.12&item=babylon-catalog-prod%2Fsandboxes-gpte.ocp412-wksp.prod)
 
 > Login via the CLI as `admin`
 

@@ -39,4 +39,4 @@ COMING SOON
 ## Other references
 * [OpenShift Service Mesh Workshop Code](https://github.com/RedHatGov/service-mesh-workshop-code)
 * [Red Hat Developer](https://developers.redhat.com/)
-* [OpenShift Docs](https://docs.openshift.com/container-platform/latest/)
+* [OpenShift Docs](https://docs.openshift.com/container-platform/4.12/service_mesh/v2x/ossm-about.html)
