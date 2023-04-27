@@ -36,11 +36,11 @@ objects:
       targetPort: 8080
       name: http
     selector:
-      deploymentconfig: ${APPLICATION_NAME}
+      app: ${APPLICATION_NAME}
   status:
     loadBalancer: {}
 - apiVersion: apps.openshift.io/v1
-  kind: DeploymentConfig
+  kind: Deployment
   metadata:
     labels:
       app: ${APPLICATION_NAME}
@@ -50,7 +50,7 @@ objects:
   spec:
     replicas: 1
     selector:
-      deploymentconfig: ${APPLICATION_NAME}
+      app: ${APPLICATION_NAME}
     strategy:
       activeDeadlineSeconds: 21600
       resources: {}
@@ -66,7 +66,7 @@ objects:
         labels:
           app: ${APPLICATION_NAME}
           application: ${APPLICATION_NAME}
-          deploymentconfig: ${APPLICATION_NAME}
+          deployment: ${APPLICATION_NAME}
           version: ${APP_VERSION_TAG}
         annotations:
           sidecar.istio.io/inject: "true"
@@ -231,7 +231,7 @@ objects:
       requests:
         storage: ${MONGODB_VOLUME_CAPACITY}
 - apiVersion: v1
-  kind: DeploymentConfig
+  kind: Deployment
   metadata:
     labels:
       application: ${APPLICATION_NAME}
@@ -251,7 +251,7 @@ objects:
         labels:
           application: ${APPLICATION_NAME}
           app: ${APPLICATION_NAME}
-          deploymentConfig: ${DATABASE_SERVICE_NAME}
+          deployment: ${DATABASE_SERVICE_NAME}
           name: ${DATABASE_SERVICE_NAME}
           version: ${MONGODB_VERSION}
         annotations:

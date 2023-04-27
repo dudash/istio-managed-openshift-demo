@@ -31,11 +31,11 @@ objects:
       targetPort: 8080
       name: http
     selector:
-      deploymentconfig: ${APPLICATION_NAME}
+      app: ${APPLICATION_NAME}
   status:
     loadBalancer: {}
 - apiVersion: apps.openshift.io/v1
-  kind: DeploymentConfig
+  kind: Deployment
   metadata:
     labels:
       app: ${APPLICATION_NAME}
@@ -45,7 +45,7 @@ objects:
   spec:
     replicas: 1
     selector:
-      deploymentconfig: ${APPLICATION_NAME}
+      app: ${APPLICATION_NAME}
     strategy:
       activeDeadlineSeconds: 21600
       resources: {}
@@ -61,7 +61,7 @@ objects:
         labels:
           app: ${APPLICATION_NAME}
           application: ${APPLICATION_NAME}
-          deploymentconfig: ${APPLICATION_NAME}
+          deployment: ${APPLICATION_NAME}
           version: ${APP_VERSION_TAG}
         annotations:
           sidecar.istio.io/inject: "true"
