@@ -10,14 +10,14 @@
 apiVersion: template.openshift.io/v1
 kind: Template
 labels:
-  template: template-boards-fromsource
+  template: boards-fromsource
 message: A new boards web service has been created in your project along with it's mongodb
 metadata:
   annotations:
     description: An boards application for the microservices demo
     openshift.io/display-name: boards
     template.openshift.io/long-description: This template defines the boards microservice
-  name: boards-fromsource
+  name: template-boards-fromsource
 objects:
 # -----------------------------------------------------------------------------
 # Node.js App Section
