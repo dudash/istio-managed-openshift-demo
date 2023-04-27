@@ -3,11 +3,5 @@ kind: OSSMConsole
 metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "25"
-  name: ossmconsole
   namespace: openshift-operators
-spec:
-  kiali:
-    serviceName: ''
-    serviceNamespace: ''
-    servicePort: 0
-    url: ''
+  name: ossmconsole
