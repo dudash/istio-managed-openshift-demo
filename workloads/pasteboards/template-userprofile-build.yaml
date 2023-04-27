@@ -8,7 +8,7 @@ metadata:
     description: An user profile build for the microservices demo
     openshift.io/display-name: userprofile-build
     template.openshift.io/long-description: This template defines the userprofile microservice build.
-  name: userprofile-build
+  name: template-userprofile-build
 objects:
 - apiVersion: build.openshift.io/v1
   kind: BuildConfig

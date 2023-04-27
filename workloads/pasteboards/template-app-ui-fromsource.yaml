@@ -8,7 +8,7 @@
 apiVersion: template.openshift.io/v1
 kind: Template
 labels:
-  template: app-ui-fromsource
+  template: template-app-ui-fromsource
 message: A new app-ui service has been created in your project. 
 metadata:
   annotations:

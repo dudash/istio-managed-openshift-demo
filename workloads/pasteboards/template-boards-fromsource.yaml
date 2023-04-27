@@ -10,7 +10,7 @@
 apiVersion: template.openshift.io/v1
 kind: Template
 labels:
-  template: boards-fromsource
+  template: template-boards-fromsource
 message: A new boards web service has been created in your project along with it's mongodb
 metadata:
   annotations:

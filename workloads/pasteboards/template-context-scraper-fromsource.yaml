@@ -15,7 +15,7 @@ metadata:
     description: An context-scraper application for the microservices demo
     openshift.io/display-name: context-scraper
     template.openshift.io/long-description: This template defines the context-scraper microservice
-  name: context-scraper-fromsource
+  name: template-context-scraper-fromsource
 objects:
 - apiVersion: v1
   kind: Service
