@@ -12,6 +12,8 @@ If you don't have one already check out this helpful post on how to create a man
     * [Setup instructions - COMING SOON]()
 * ARO is a managed OpenShift service run by Microsoft Azure (and Red Hat)
     * [Setup instructions - COMING SOON]()
+* RHPDS is a Red Hat and partners private service run by Red Hat
+    * [Setup instructions](./.docs/setup-rhpds.md)
 
 ### Bootstrap GitOps capabilities
 Run the following command to bootstrap our cluster with OpenShift GitOps - it'll be used later to [declare, pull, and reconcile](https://opengitops.dev/) our system services (platform components) and app workloads (apps). Make sure to login as an admin first.

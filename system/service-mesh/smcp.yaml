@@ -6,6 +6,11 @@ metadata:
   name: smcp
   namespace: istio-system
 spec:
+  proxy:
+    networking:
+      trafficControl:
+        outbound:
+          policy: REGISTRY_ONLY
   addons:
     grafana:
       enabled: true
