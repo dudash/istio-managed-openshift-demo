@@ -17,7 +17,7 @@ metadata:
     description: An boards application for the microservices demo
     openshift.io/display-name: boards
     template.openshift.io/long-description: This template defines the boards microservice
-  name: boards-fromsource
+  name: template-boards-fromsource
 objects:
 # -----------------------------------------------------------------------------
 # Node.js App Section

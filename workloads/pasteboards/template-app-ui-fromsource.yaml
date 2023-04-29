@@ -15,7 +15,7 @@ metadata:
     description: An app-ui application for the microservices demo
     openshift.io/display-name: app-ui
     template.openshift.io/long-description: This template defines the app-ui microservice
-  name: app-ui-fromsource
+  name: template-app-ui-fromsource
 objects:
 - apiVersion: v1
   kind: Service
