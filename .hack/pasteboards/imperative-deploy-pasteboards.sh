@@ -3,6 +3,7 @@ oc project pasteboards
 
 # not sure this is still necessary but it doesn't hurt
 oc -n openshift tag registry.redhat.io/rhscl/nodejs-10-rhel7 nodejs:10
+oc -n openshift tag registry.redhat.io/rhscl/mongodb-36-rhel7:latest mongodb:3.6
 
 # We are just going to manually run through the steps outlined in the workshop to get things ready to showcase service mesh
 # https://github.com/RedHatGov/service-mesh-workshop-dashboard/blob/main/workshop/content/lab1.3_deploymsa.md
