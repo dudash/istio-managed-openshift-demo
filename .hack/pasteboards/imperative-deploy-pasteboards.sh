@@ -50,3 +50,6 @@ for ((i=1;i<=100;i++)); do curl -s -o /dev/null $GATEWAY_URL; done
 
 # load the user profile
 for ((i=1;i<=100;i++)); do curl -s -o /dev/null $GATEWAY_URL/profile; done
+
+oc describe cm kiali -n istio-system | grep excluded_workloads -A10
+echo Please \'oc edit cm kiali -n istio-system\' to remove DeploymentConfigs and ReplicationControllers so that this legacy app will show up in Kiali
