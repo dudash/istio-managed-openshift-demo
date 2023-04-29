@@ -15,7 +15,7 @@ metadata:
     description: An app-ui application for the microservices demo
     openshift.io/display-name: app-ui
     template.openshift.io/long-description: This template defines the app-ui microservice
-  name: template-app-ui-fromsource
+  name: app-ui-fromsource
 objects:
 - apiVersion: v1
   kind: Service
@@ -31,11 +31,11 @@ objects:
       targetPort: 8080
       name: http
     selector:
-      app: ${APPLICATION_NAME}
+      deploymentconfig: ${APPLICATION_NAME}
   status:
     loadBalancer: {}
-- apiVersion: apps/v1
-  kind: Deployment
+- apiVersion: apps.openshift.io/v1
+  kind: DeploymentConfig
   metadata:
     labels:
       app: ${APPLICATION_NAME}
@@ -45,8 +45,7 @@ objects:
   spec:
     replicas: 1
     selector:
-      matchLabels:
-        app: ${APPLICATION_NAME}
+      deploymentconfig: ${APPLICATION_NAME}
     strategy:
       activeDeadlineSeconds: 21600
       resources: {}
@@ -56,13 +55,13 @@ objects:
         maxUnavailable: 25%
         timeoutSeconds: 600
         updatePeriodSeconds: 1
-      type: RollingUpdate
+      type: Rolling
     template:
       metadata:
         labels:
           app: ${APPLICATION_NAME}
           application: ${APPLICATION_NAME}
-          deployment: ${APPLICATION_NAME}
+          deploymentconfig: ${APPLICATION_NAME}
           version: ${APP_VERSION_TAG}
         annotations:
           sidecar.istio.io/inject: "true"

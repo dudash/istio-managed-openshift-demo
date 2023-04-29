@@ -37,7 +37,15 @@ oc start-build userprofile-1.0
 oc get pods
 
 oc create -f ./istio/gateway.yaml
+oc create -f ./istio/virtual-services-all-v2.yaml
+oc create -f ./istio/destrule-all.yaml
 
 echo The istio ingress gateway is:
 GATEWAY_URL=$(oc get route istio-ingressgateway -n istio-system --template='http://{{.spec.host}}')
 echo $GATEWAY_URL
+
+# load the main UI
+for ((i=1;i<=100;i++)); do curl -s -o /dev/null $GATEWAY_URL; done
+
+# load the user profile
+for ((i=1;i<=100;i++)); do curl -s -o /dev/null $GATEWAY_URL/profile; done
