@@ -2,6 +2,6 @@ apiVersion: kiali.io/v1alpha1
 kind: OSSMConsole
 metadata:
   annotations:
-    argocd.argoproj.io/sync-wave: "25"
+    argocd.argoproj.io/sync-wave: "30"
   namespace: openshift-operators
   name: ossmconsole
