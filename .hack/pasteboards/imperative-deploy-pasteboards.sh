@@ -39,7 +39,7 @@ oc get pods
 
 oc create -f ./istio/gateway.yaml
 oc create -f ./istio/virtual-services-all-v2.yaml
-oc create -f ./istio/destrule-all.yaml
+oc create -f ./istio/destinationrules-all.yaml
 
 echo The istio ingress gateway is:
 GATEWAY_URL=$(oc get route istio-ingressgateway -n istio-system --template='http://{{.spec.host}}')
