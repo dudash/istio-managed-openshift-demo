@@ -7,5 +7,6 @@ bases:
 - ../../components/appprojects
 
 resources:
+- group-cluster-admin.yaml
 - openshift-gitops-argocd.yaml
 - openshift-gitops-rbac-policy.yaml
