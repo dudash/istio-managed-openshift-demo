@@ -13,8 +13,6 @@ resources:
 - kiali-ossm.yaml
 - openshift-distributed-tracing-ns.yaml
 - openshift-distributed-tracing.yaml
-- openshift-operators-redhat-ns.yaml
-- openshift-operators-redhat.yaml
 - servicemeshmemberroll-default.yaml
 - servicemeshoperator.yaml
 - service-monitor.yaml
