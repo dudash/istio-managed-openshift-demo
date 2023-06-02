@@ -24,7 +24,7 @@ It's going to spit out a bunch of error looking output - which is OK, probably -
 
 ### Choose your own adventure
 There are a few different paths to get started running the demo app and seeing some cool things in action. Choose your path from the options below:
-1) TBD
+1) [Check out](./.docs/argocd-tour.md) what OpenShift GitOps (ArgoCD) for us to deploy/manage resources
 2) TBD
 3) TBD
 4) TBD
